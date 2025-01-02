@@ -1,0 +1,43 @@
+[
+    {
+      "title": "Complete React tutorial",
+      "slug": "complete-react-tutorial",
+      "description": "Follow along with the React tutorial and complete all exercises.",
+      "isCompleted": false,
+      "priority": "High",
+      "difficulty": "Medium"
+    },
+    {
+      "title": "Fix header layout",
+      "slug": "fix-header-layout",
+      "description": "Adjust the layout of the header for better responsiveness.",
+      "isCompleted": true,
+      "priority": "Medium",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Write unit tests for API",
+      "slug": "write-unit-tests-for-api",
+      "description": "Add unit tests for the newly implemented API endpoints.",
+      "isCompleted": false,
+      "priority": "High",
+      "difficulty": "Hard"
+    },
+    {
+      "title": "Clean up CSS",
+      "slug": "clean-up-css",
+      "description": "Remove unused styles and organize CSS code.",
+      "isCompleted": false,
+      "priority": "Low",
+      "difficulty": "Easy"
+    },
+    {
+      "title": "Optimize database queries",
+      "slug": "optimize-database-queries",
+      "description": "Improve the efficiency of database queries for faster response times.",
+      "isCompleted": false,
+      "priority": "Medium",
+      "difficulty": "Hard"
+    }
+  ]
+  
