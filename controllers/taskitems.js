@@ -5,8 +5,13 @@ const asyncHandler = require('../middleware/async');
 
 
 exports.getAllTasks = asyncHandler(async (req, res, next) => {
-
-    const Tasks = await TaskItem.find()
+    let queryString = req.query;
+    const reqQuery = {...req.query};
+    const removeFields = ['select'];
+    // removeFields.map(field => delete reqQuery(field));
+    console.log(reqQuery);
+     queryString = JSON.stringify( reqQuery);
+    const Tasks = await TaskItem.find(JSON.parse(queryString));
     res.status(200).json({ count: Tasks.length, Data: Tasks });
 
 });

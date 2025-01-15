@@ -5,7 +5,7 @@ const errorHandler = ((err, req, res, next) => {
     let error = {...err}
     error.message = err.message;
     // console.log(err.stack.red);
-
+console.log('this is from errorHandler console log',err);
     if(err.name === 'CastError'){
         const message = `Task Item not found with ID: ${err.value}`
         error = new ErrorResponse(message, 404)

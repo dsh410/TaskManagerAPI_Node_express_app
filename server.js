@@ -5,6 +5,10 @@ const colors = require('colors');
 const TaskItems = require('./routes/taskitems');
 const connectDb = require('./config/db')
 const errorHandler = require('./middleware/errorhandler');
+const cors = require('cors');
+
+
+
 
 dotenv.config({ path: './config/config.env' });
 
@@ -15,7 +19,7 @@ const app = express();
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 };
-
+app.use(cors()); 
 app.use(express.json());
 
 app.use('/api/v1/taskItems/', TaskItems);

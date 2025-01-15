@@ -1,43 +1,37 @@
 [
-    {
-      "title": "Complete React tutorial",
-      "slug": "complete-react-tutorial",
-      "description": "Follow along with the React tutorial and complete all exercises.",
-      "isCompleted": false,
-      "priority": "High",
-      "difficulty": "Medium"
-    },
-    {
-      "title": "Fix header layout",
-      "slug": "fix-header-layout",
-      "description": "Adjust the layout of the header for better responsiveness.",
-      "isCompleted": true,
-      "priority": "Medium",
-      "difficulty": "Easy"
-    },
-    {
-      "title": "Write unit tests for API",
-      "slug": "write-unit-tests-for-api",
-      "description": "Add unit tests for the newly implemented API endpoints.",
-      "isCompleted": false,
-      "priority": "High",
-      "difficulty": "Hard"
-    },
-    {
-      "title": "Clean up CSS",
-      "slug": "clean-up-css",
-      "description": "Remove unused styles and organize CSS code.",
-      "isCompleted": false,
-      "priority": "Low",
-      "difficulty": "Easy"
-    },
-    {
-      "title": "Optimize database queries",
-      "slug": "optimize-database-queries",
-      "description": "Improve the efficiency of database queries for faster response times.",
-      "isCompleted": false,
-      "priority": "Medium",
-      "difficulty": "Hard"
-    }
-  ]
-  
+  {
+    "title": "Buy groceries",
+    "description": "Milk, Bread, Eggs, Cheese",
+    "isCompleted": false,
+    "createdAt": "2023-10-01T09:00:00Z",
+    "updatedAt": "2023-10-01T09:00:00Z"
+  },
+  {
+    "title": "Complete React tutorial",
+    "description": "Finish the official React.js tutorial on the website",
+    "isCompleted": true,
+    "createdAt": "2023-09-28T14:30:00Z",
+    "updatedAt": "2023-10-02T16:45:00Z"
+  },
+  {
+    "title": "Workout session",
+    "description": "Attend the virtual yoga class at 6 PM",
+    "isCompleted": false,
+    "createdAt": "2023-10-03T08:15:00Z",
+    "updatedAt": "2023-10-03T08:15:00Z"
+  },
+  {
+    "title": "Read a book",
+    "description": "Start reading \"Clean Code\" by Robert C. Martin",
+    "isCompleted": false,
+    "createdAt": "2023-10-04T11:20:00Z",
+    "updatedAt": "2023-10-04T11:20:00Z"
+  },
+  {
+    "title": "Plan weekend trip",
+    "description": "Decide on a destination and book accommodations",
+    "isCompleted": false,
+    "createdAt": "2023-10-05T10:50:00Z",
+    "updatedAt": "2023-10-05T10:50:00Z"
+  }
+]
