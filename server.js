@@ -19,7 +19,7 @@ const app = express();
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 };
-app.use(cors()); 
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/v1/taskItems/', TaskItems);
@@ -32,6 +32,6 @@ const server = app.listen(PORT, () => {
 })
 
 process.on('unhandledRejection', (error, promise) => {
-console.log(`Error: ${error.message}`.red);
-server.close(() => process.exit(1));
+  console.log(`Error: ${error.message}`.red);
+  server.close(() => process.exit(1));
 });

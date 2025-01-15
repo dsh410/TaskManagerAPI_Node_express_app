@@ -6,11 +6,11 @@ const asyncHandler = require('../middleware/async');
 
 exports.getAllTasks = asyncHandler(async (req, res, next) => {
     let queryString = req.query;
-    const reqQuery = {...req.query};
+    const reqQuery = { ...req.query };
     const removeFields = ['select'];
     // removeFields.map(field => delete reqQuery(field));
     console.log(reqQuery);
-     queryString = JSON.stringify( reqQuery);
+    queryString = JSON.stringify(reqQuery);
     const Tasks = await TaskItem.find(JSON.parse(queryString));
     res.status(200).json({ count: Tasks.length, Data: Tasks });
 
@@ -40,9 +40,9 @@ exports.updateTask = asyncHandler(async (req, res, next) => {
 });
 
 exports.createTask = asyncHandler(async (req, res, next) => {
- 
-        const newTask = await TaskItem.create(req.body);
-               res.status(201).json({ data: newTask });
+
+    const newTask = await TaskItem.create(req.body);
+    res.status(201).json({ data: newTask });
 
 });
 
