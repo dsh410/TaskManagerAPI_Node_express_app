@@ -12,7 +12,7 @@ exports.getAllTasks = asyncHandler(async (req, res, next) => {
     console.log(reqQuery);
     queryString = JSON.stringify(reqQuery);
     const Tasks = await TaskItem.find(JSON.parse(queryString));
-    res.status(200).json({ count: Tasks.length, Data: Tasks });
+    res.status(200).json({ count: Tasks.length, result: Tasks });
 
 });
 
@@ -22,7 +22,7 @@ exports.getTask = asyncHandler(async (req, res, next) => {
     if (!Task) {
         return next(new ErrorResponse(`Task Item not found with ID: ${req.params.id}`, 404));
     }
-    res.status(200).json({ Data: Task });
+    res.status(200).json({ result: Task });
 
 });
 
@@ -42,7 +42,7 @@ exports.updateTask = asyncHandler(async (req, res, next) => {
 exports.createTask = asyncHandler(async (req, res, next) => {
 
     const newTask = await TaskItem.create(req.body);
-    res.status(201).json({ data: newTask });
+    res.status(201).json({ result: newTask });
 
 });
 
@@ -52,6 +52,6 @@ exports.deleteTask = asyncHandler(async (req, res, next) => {
     if (!deletedTask) {
         return next(new ErrorResponse(`Task Item not found with ID: ${req.params.id}`, 404));
     }
-    res.status(204).json({ Request: 'Successful', Data: {} });
+    res.status(204).json({ Request: 'Successful', result: {} });
 
 });
